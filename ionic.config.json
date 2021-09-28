@@ -1,0 +1,7 @@
+{
+  "name": "multiuses",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
