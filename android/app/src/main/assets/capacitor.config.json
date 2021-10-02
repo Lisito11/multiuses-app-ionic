@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "multiuses",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

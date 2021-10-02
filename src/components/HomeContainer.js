@@ -13,7 +13,7 @@ export const HomeContainer = () => {
           </IonCardHeader>
            
           <IonCardContent>
-            <img src="https://res.cloudinary.com/lisitor/image/upload/v1633110855/profile_ycppdn.jpg" alt='profile' width="300" height="340"/> 
+            <img src="https://res.cloudinary.com/lisitor/image/upload/v1633110855/profile_ycppdn.jpg" alt='profile' width="200" height="240"/> 
       </IonCardContent>
         </IonCard>
 

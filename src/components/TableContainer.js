@@ -45,7 +45,7 @@ export const TableContainer = () => {
           <IonItem>
             <IonLabel position="floating">Escribe un número</IonLabel>
             <IonInput
-              type="text"
+              type="number"
               name="number"
               value={number}
               onIonChange={(e) => setNumber(e.detail.value)}

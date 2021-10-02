@@ -52,7 +52,7 @@ export const SumContainer = () => {
               <IonItem>
                   <IonLabel position="floating">Escribe el número 1</IonLabel>
                   <IonInput
-                  type="text"
+                  type="number"
                   name='number1'
                   value={number1}
                   onIonChange={e => setNumber1(e.detail.value)}
@@ -64,7 +64,7 @@ export const SumContainer = () => {
               <IonItem>
                   <IonLabel position="floating">Escribe el número 2</IonLabel>
                   <IonInput
-                  type="text"
+                  type="number"
                   name='number2'
                   value={number2}
                   onIonChange={e => setNumber2(e.detail.value)}
