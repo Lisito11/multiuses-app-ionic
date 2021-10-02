@@ -1,56 +1,96 @@
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel } from '@ionic/react'
-import { pin, walk, warning, wifi, wine } from 'ionicons/icons'
-import React from 'react'
-
+import {
+  IonButton,
+  IonCard,
+  IonCardContent,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonCardTitle,
+  IonIcon,
+  IonInput,
+  IonItem,
+  IonLabel,
+  IonGrid,
+  IonCol,
+  IonRow,
+  IonContent,
+  IonItemDivider,
+  IonBadge,
+} from "@ionic/react";
+import { pin, walk, warning, wifi, wine } from "ionicons/icons";
+import React, { useState } from "react";
+import "../pages/Sum.css";
+import { useForm } from './../hooks/useForm';
 export const SumContainer = () => {
-    return (
-        <>
-        <IonCard>
-          <IonCardHeader>
-            <IonCardSubtitle>Card Subtitle</IonCardSubtitle>
-            <IonCardTitle>Card Title</IonCardTitle>
-          </IonCardHeader>
+  const [number, setNumber] = useState('');
+  const [number1, setNumber1] = useState();
+  const [number2, setNumber2] = useState();
 
+  const sumar = () => {
+    setNumber(parseInt(number1) + parseInt(number2))
+    setNumber1('')
+    setNumber2('')
+  }
+  return (
+    <>
+      <IonCard>
+        <IonCardHeader>
+          <IonCardTitle>Sumadora</IonCardTitle>
+        </IonCardHeader>
+
+        <IonCardContent>
+          Esta es una calculadora que suma dos números. Por favor introduce dos
+          números para sumarlos.
+        </IonCardContent>
+
+      </IonCard>
+      <IonCard>
           <IonCardContent>
-            Keep close to Nature's heart... and break clear away, once in awhile,
-            and climb a mountain or spend a week in the woods. Wash your spirit clean.
-      </IonCardContent>
-        </IonCard>
+            
+          <IonGrid>
+            <IonRow>
+              <IonCol size="12">
+              <IonItem>
+                  <IonLabel position="floating">Escribe el número 1</IonLabel>
+                  <IonInput
+                  type="text"
+                  name='number1'
+                  value={number1}
+                  onIonChange={e => setNumber1(e.detail.value)}
+                ></IonInput>
+                </IonItem>
+               
+              </IonCol>
+              <IonCol size="12">
+              <IonItem>
+                  <IonLabel position="floating">Escribe el número 2</IonLabel>
+                  <IonInput
+                  type="text"
+                  name='number2'
+                  value={number2}
+                  onIonChange={e => setNumber2(e.detail.value)}
+                ></IonInput>
+                </IonItem>
+                
+              </IonCol>
+              <IonCol size="12">
+                <IonButton expand="block" onClick={sumar}>Sumar</IonButton>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </IonCardContent>
+      </IonCard>
 
-        <IonCard>
-          <IonItem>
-            <IonIcon icon={pin} slot="start" />
-            <IonLabel>ion-item in a card, icon left, button right</IonLabel>
-            <IonButton fill="outline" slot="end">View</IonButton>
-          </IonItem>
 
-          <IonCardContent>
-            This is content, without any paragraph or header tags,
-            within an ion-cardContent element.
-      </IonCardContent>
-        </IonCard>
+      <IonCard>
+        <IonCardHeader>
+          <IonCardTitle>Resultado</IonCardTitle>
+          <IonCardSubtitle>
+            <IonBadge color="primary">{number}</IonBadge>
+          </IonCardSubtitle>
+        </IonCardHeader>
+      </IonCard>
 
-        <IonCard>
-          <IonItem href="#" className="ion-activated">
-            <IonIcon icon={wifi} slot="start" />
-            <IonLabel>Card Link Item 1 activated</IonLabel>
-          </IonItem>
 
-          <IonItem href="#">
-            <IonIcon icon={wine} slot="start" />
-            <IonLabel>Card Link Item 2</IonLabel>
-          </IonItem>
-
-          <IonItem className="ion-activated">
-            <IonIcon icon={warning} slot="start" />
-            <IonLabel>Card Button Item 1 activated</IonLabel>
-          </IonItem>
-
-          <IonItem>
-            <IonIcon icon={walk} slot="start" />
-            <IonLabel>Card Button Item 2</IonLabel>
-          </IonItem>
-        </IonCard>
-        </>
-    )
-}
+    </>
+  );
+};

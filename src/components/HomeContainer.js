@@ -1,5 +1,5 @@
 import './ExploreContainer.css';
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel } from '@ionic/react'
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonIcon, IonItem, IonLabel, IonThumbnail } from '@ionic/react'
 import { logoFacebook, logoGithub, logoGoogle, logoInstagram, pin, sadOutline, walk, warning, wifi, wine } from 'ionicons/icons'
 import React from 'react'
 
@@ -13,7 +13,7 @@ export const HomeContainer = () => {
           </IonCardHeader>
            
           <IonCardContent>
-            <img src="https://res.cloudinary.com/lisitor/image/upload/v1633110855/profile_ycppdn.jpg" alt='profile' width="300" height="340"/>         
+            <img src="https://res.cloudinary.com/lisitor/image/upload/v1633110855/profile_ycppdn.jpg" alt='profile' width="300" height="340"/> 
       </IonCardContent>
         </IonCard>
 
